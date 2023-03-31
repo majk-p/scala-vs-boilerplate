@@ -9,7 +9,8 @@ import Animal.*
 
 def filterAnimals(animals: Seq[Animal]) = 
   animals.collect {
-    case cat @ Cat(name) if name.startsWith("A")  => cat
+    case cat @ Cat(s"A$_")  => cat
+    // case cat @ Cat(name) if name.startsWith("A")  => cat // Alternative
     case snake @ Snake(_, length) if length > 1.5 => snake
   }
 

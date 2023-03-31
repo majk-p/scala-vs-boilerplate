@@ -361,9 +361,94 @@ case class Order(orderId: String Refined Uuid, lines: NonEmptyList[OrderLine])
 
 ---
 
+# What makes Scala concise
+
+Let's see a few more techniques that make the code type safe and yet not bloated
+
+---
+
+# Type inference
+
+To make the statically typed language feel like a dynamic one, it needs to be able to guess the types for you
+
+---
+
+# Type inference
+
+```scala
+val list = List(1, 2, 3)
+// is an equivalent to
+val list: List[Int] = List(1, 2, 3)
+```
+
+Notice how we didn't even need to do `List[Int](1, 2, 3)`, 
+the compiler has deduced it
+
+---
+
+# Type inference
+
+```scala
+val coordinates = Map(
+  "Wrocław" -> (51.107883, 17.038538),
+  "Kraków" -> (50.049683, 19.944544)
+)
+// is an equivalent to
+val coordinates: Map[String, (Double, Double)] = Map(
+  "Wrocław" -> (51.107883, 17.038538),
+  "Kraków" -> (50.049683, 19.944544)
+)
+```
+
+And so on with even more complex types
+
+---
+
+# Pattern matching
+
+Do you still remember constructs like `switch / case`?
+
+---
+
+# Pattern matching
+
+Imagine a flow control structure so powerful it can inspect the value, runtime type and even the internal structure of a type
+
+---
+# Pattern matching 
+
+The simplest example
+
+```scala
+def matchInt(x: Int) = x match {
+  case 1 => "one"
+  case 2 => "two"
+  case _ => "other"
+}
+```
+
+---
+
+# Pattern matching 
+
+Decomposing objects
+
+```scala
+def matchList(l: List[Int]) = l match {
+  case List(1, 2, 3)                      => "one, two three"
+  case 1 :: 1 :: 2 :: 3 :: 5 :: _         => "starts like Fibonacci"
+  case anything if anything.forall(_ > 0) => "list of positive numbers"
+  case List(9, 9, x)                      => s"nine nine and $x"
+  case _                                  => "just a list"
+}
+```
+---
+
 # One more exercise
 
-Pet is too generic, let's see how we could model an extensible enum in Scala
+Remember the Pet model? 
+
+It was too generic, let's see how we could model an extensible enum in Scala
 
 
 ---
@@ -436,6 +521,17 @@ Extending someone else's API
 Extending someone else's API
 
 Say you want to be able to find odd numbers on any `List[Int]`
+
+---
+
+# Extension methods
+
+In this case `List` is a class that comes from library, but let's extend it
+
+```scala
+extension (x: List[Int])
+  def odds = x.filter(_ % 2 == 1)
+```
 
 ---
 

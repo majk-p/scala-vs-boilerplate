@@ -8,7 +8,7 @@ def main() =
   println(testData.odds)
 
 
-// This will not compile 
+// This will not compile   
 // @main
 // def main() =
 //   val testData = List("123", "456")
