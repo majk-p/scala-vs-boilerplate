@@ -21,8 +21,8 @@ section::before {
   content: "© Copyright 2023 Michał Pawlik and Ocado Group plc. All rights reserved.";
   font-size: 12px;
   color: #888;
-  padding-left: 380px;
-  padding-right: 380px;
+  padding-left: 360px;
+  padding-right: 360px;
   align-items: center;
 
   /* Position and size */
@@ -637,8 +637,14 @@ An extension method was tried, but could not be fully constructed:
 
 ---
 <!-- _class: invert -->
+
 # Thank you!
 
+* https://blog.michalp.net
+* https://hostux.social/@majkp
+* https://github.com/majk-p
+
+![bg right:30% 80%](img/qr.png)
 
 <!-- this section might not make it into the presentation -->
 <!-- # Extras
