@@ -43,6 +43,9 @@ footer{
 }
 </style>
 
+<!-- EOF Global style -->
+<!-- Slides start below -->
+
 # Get rid of the boilerplate with Scala
 
 ###### by [Michał Pawlik](https://michalp.net/)
