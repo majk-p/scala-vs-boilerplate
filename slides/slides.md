@@ -1,12 +1,17 @@
 ---
 theme: Uncover
 size: 16:9
-transition: drop
+transition: swap
 marp: true
 ---
 
 <!-- Global style -->
 <style>
+@import "https://rsms.me/inter/inter.css";
+
+section {
+  font-family: Inter;
+}
 
 section::before {
   position: absolute;
@@ -16,8 +21,8 @@ section::before {
   content: "© Copyright 2023 Michał Pawlik and Ocado Group plc. All rights reserved.";
   font-size: 12px;
   color: #888;
-  padding-left: 300px;
-  padding-right: 455px;
+  padding-left: 380px;
+  padding-right: 380px;
   align-items: center;
 
   /* Position and size */
