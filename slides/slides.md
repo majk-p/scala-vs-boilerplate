@@ -37,6 +37,10 @@ section::before {
   pointer-events: none;
 }
 
+code {
+  font-family: "Fira Code", Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
 footer{  
   font-size: 12px;
   color: #888;
