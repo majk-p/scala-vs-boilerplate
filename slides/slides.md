@@ -5,9 +5,40 @@ transition: drop
 marp: true
 ---
 
-# Get rid of the boilerplate
+<!-- Global style -->
+<style>
 
-with Scala
+section::before {
+  position: absolute;
+  display: flex;
+
+  /* Copyright text */
+  content: "© Copyright 2023 Michał Pawlik and Ocado Group plc. All rights reserved.";
+  font-size: 12px;
+  color: #888;
+  padding-left: 300px;
+  padding-right: 455px;
+  align-items: center;
+
+  /* Position and size */
+  bottom: 40px;
+  height: 32px;
+
+  /* Watermark image */
+  background: url("img/ocado-technology_logo_transparent.png") no-repeat right;
+  background-size: contain;
+
+  /* Allow to control elements under the watermark */
+  pointer-events: none;
+}
+
+footer{  
+  font-size: 12px;
+  color: #888;
+}
+</style>
+
+# Get rid of the boilerplate with Scala
 
 ###### by [Michał Pawlik](https://michalp.net/)
 
