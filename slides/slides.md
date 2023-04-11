@@ -1,11 +1,10 @@
 ---
 theme: Uncover
 size: 16:9
-transition: swap
+transition: push
 marp: true
 ---
 
-<!-- Global style -->
 <style>
 @import "https://rsms.me/inter/inter.css";
 
@@ -47,8 +46,6 @@ footer{
 }
 </style>
 
-<!-- EOF Global style -->
-<!-- Slides start below -->
 
 # Get rid of the boilerplate with Scala
 
@@ -56,7 +53,13 @@ footer{
 
 ![bg right:27% 90%](img/scala-spiral.png)
 
+<!--
 
+- Few words about myself
+- Goal: Show design decisions that make Scala concise 
+- This is not about which language is better, but rather what makes Scala worth checking out
+
+-->
 ---
 
 # What's boilerplate?
